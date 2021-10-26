@@ -17,8 +17,8 @@ class ProfilePic extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(defaultPadding),
-      margin: EdgeInsets.symmetric(vertical: defaultPadding),
+      padding: EdgeInsets.all(kDefaultPadding),
+      margin: EdgeInsets.symmetric(vertical: kDefaultPadding),
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         border: Border.all(

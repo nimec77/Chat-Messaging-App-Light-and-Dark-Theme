@@ -10,7 +10,7 @@ class RecentSearchContacts extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
+      padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -24,14 +24,14 @@ class RecentSearchContacts extends StatelessWidget {
                       .withOpacity(0.32),
                 ),
           ),
-          SizedBox(height: defaultPadding),
+          SizedBox(height: kDefaultPadding),
           SizedBox(
             width: double.infinity,
             height: 56,
             child: Stack(
               children: [
                 ...List.generate(
-                  demoContactsImage.length + 1,
+                  kDemoContactsImage.length + 1,
                   (index) => Positioned(
                     left: index * 48,
                     child: Container(
@@ -41,11 +41,11 @@ class RecentSearchContacts extends StatelessWidget {
                             color: Theme.of(context).scaffoldBackgroundColor),
                         shape: BoxShape.circle,
                       ),
-                      child: index < demoContactsImage.length
+                      child: index < kDemoContactsImage.length
                           ? CircleAvatar(
                               radius: 26,
                               backgroundImage:
-                                  AssetImage(demoContactsImage[index]),
+                                  AssetImage(kDemoContactsImage[index]),
                             )
                           : RoundedCounter(total: 35),
                     ),

@@ -1,6 +1,6 @@
-import 'package:chat/screens/welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:chat/screens/welcome/welcome_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -11,7 +11,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    // demo time it required to load inital data
+    // demo time it required to load initial data
     Future.delayed(
       Duration(seconds: 1),
       () => Navigator.pushReplacement(
@@ -28,8 +28,8 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Center(
         child: SvgPicture.asset(
           MediaQuery.of(context).platformBrightness == Brightness.dark
-              ? "assets/icons/Logo_dark_theme.svg"
-              : "assets/icons/Logo_light_theme.svg",
+              ? 'assets/icons/Logo_dark_theme.svg'
+              : 'assets/icons/Logo_light_theme.svg',
         ),
       ),
     );

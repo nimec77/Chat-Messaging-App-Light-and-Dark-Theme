@@ -12,11 +12,11 @@ class ContactsScreen extends StatelessWidget {
         actions: [IconButton(icon: Icon(Icons.search), onPressed: () {})],
       ),
       body: ListView.builder(
-        itemCount: demoContactsImage.length,
+        itemCount: kDemoContactsImage.length,
         itemBuilder: (context, index) => ContactCard(
           name: "Jenny Wilson",
           number: "(239) 555-0108",
-          image: demoContactsImage[index],
+          image: kDemoContactsImage[index],
           isActive: index.isEven, // for demo
           press: () {},
         ),

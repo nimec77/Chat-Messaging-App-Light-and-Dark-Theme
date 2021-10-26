@@ -1,6 +1,6 @@
+import 'package:flutter/material.dart';
 import 'package:chat/components/primary_button.dart';
 import 'package:chat/constants.dart';
-import 'package:flutter/material.dart';
 
 import 'components/info.dart';
 import 'components/profile_pic.dart';
@@ -19,7 +19,7 @@ class ProfileScreen extends StatelessWidget {
         ],
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.symmetric(horizontal: defaultPadding),
+        padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
         child: Column(
           children: [
             ProfilePic(image: "assets/images/user_2.png"),
@@ -27,7 +27,7 @@ class ProfileScreen extends StatelessWidget {
               "Annette Black",
               style: Theme.of(context).textTheme.headline6,
             ),
-            Divider(height: defaultPadding * 2),
+            Divider(height: kDefaultPadding * 2),
             Info(
               infoKey: "User ID",
               info: "@annette.me",
@@ -44,7 +44,7 @@ class ProfileScreen extends StatelessWidget {
               infoKey: "Email Address",
               info: "demo@mail.com",
             ),
-            SizedBox(height: defaultPadding),
+            SizedBox(height: kDefaultPadding),
             Align(
               alignment: Alignment.centerRight,
               child: SizedBox(

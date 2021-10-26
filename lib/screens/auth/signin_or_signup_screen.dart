@@ -1,15 +1,15 @@
-import 'package:chat/screens/chats/chats_screen.dart';
+import 'package:chat/components/primary_button.dart';
+import 'package:chat/constants.dart';
 import 'package:flutter/material.dart';
-import '../../components/primary_button.dart';
-import '../../constants.dart';
+import 'package:chat/screens/chats/chats_screen.dart';
 
-class SigninOrSignupScreen extends StatelessWidget {
+class SignInOrSignupScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
+          padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
           child: Column(
             children: [
               Spacer(flex: 2),
@@ -29,7 +29,7 @@ class SigninOrSignupScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: defaultPadding * 1.5),
+              SizedBox(height: kDefaultPadding * 1.5),
               PrimaryButton(
                 color: Theme.of(context).colorScheme.secondary,
                 text: "Sign Up",

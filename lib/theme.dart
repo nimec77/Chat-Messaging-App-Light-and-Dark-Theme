@@ -6,16 +6,16 @@ import 'package:google_fonts/google_fonts.dart';
 
 ThemeData lightThemeData(BuildContext context) {
   return ThemeData.light().copyWith(
-    primaryColor: primaryColor,
+    primaryColor: kPrimaryColor,
     scaffoldBackgroundColor: Colors.white,
     appBarTheme: appBarTheme,
-    iconTheme: IconThemeData(color: contentColorLightTheme),
+    iconTheme: IconThemeData(color: kContentColorLightTheme),
     textTheme: GoogleFonts.interTextTheme(Theme.of(context).textTheme)
-        .apply(bodyColor: contentColorLightTheme),
+        .apply(bodyColor: kContentColorLightTheme),
     colorScheme: ColorScheme.light(
-      primary: primaryColor,
-      secondary: secondaryColor,
-      error: errorColor,
+      primary: kPrimaryColor,
+      secondary: kSecondaryColor,
+      error: kErrorColor,
     ),
     // bottomNavigationBarTheme: BottomNavigationBarThemeData(
     //   backgroundColor: Colors.white,
@@ -25,7 +25,7 @@ ThemeData lightThemeData(BuildContext context) {
     //   showUnselectedLabels: true,
     // ),
     inputDecorationTheme: inputDecorationTheme.copyWith(
-        fillColor: primaryColor.withOpacity(0.05)),
+        fillColor: kPrimaryColor.withOpacity(0.05)),
   );
 }
 
@@ -33,16 +33,16 @@ ThemeData darkThemeData(BuildContext context) {
   // Bydefault flutter provie us light and dark theme
   // we just modify it as our need
   return ThemeData.dark().copyWith(
-    primaryColor: primaryColor,
-    scaffoldBackgroundColor: contentColorLightTheme,
+    primaryColor: kPrimaryColor,
+    scaffoldBackgroundColor: kContentColorLightTheme,
     appBarTheme: appBarTheme,
-    iconTheme: IconThemeData(color: contentColorDarkTheme),
+    iconTheme: IconThemeData(color: kContentColorDarkTheme),
     textTheme: GoogleFonts.interTextTheme(Theme.of(context).textTheme)
-        .apply(bodyColor: contentColorDarkTheme),
+        .apply(bodyColor: kContentColorDarkTheme),
     colorScheme: ColorScheme.dark().copyWith(
-      primary: primaryColor,
-      secondary: secondaryColor,
-      error: errorColor,
+      primary: kPrimaryColor,
+      secondary: kSecondaryColor,
+      error: kErrorColor,
     ),
     // bottomNavigationBarTheme: BottomNavigationBarThemeData(
     //   backgroundColor: contentColorLightTheme,
@@ -58,9 +58,9 @@ ThemeData darkThemeData(BuildContext context) {
 final appBarTheme = AppBarTheme(centerTitle: false, elevation: 0);
 final inputDecorationTheme = InputDecorationTheme(
   filled: true,
-  fillColor: contentColorDarkTheme.withOpacity(0.08),
+  fillColor: kContentColorDarkTheme.withOpacity(0.08),
   contentPadding: EdgeInsets.symmetric(
-      horizontal: defaultPadding * 1.5, vertical: defaultPadding),
+      horizontal: kDefaultPadding * 1.5, vertical: kDefaultPadding),
   border: OutlineInputBorder(
     borderSide: BorderSide.none,
     borderRadius: const BorderRadius.all(Radius.circular(50)),

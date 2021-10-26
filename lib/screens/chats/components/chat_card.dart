@@ -20,7 +20,7 @@ class ChatCard extends StatelessWidget {
       onTap: press,
       child: Padding(
         padding: const EdgeInsets.symmetric(
-            horizontal: defaultPadding, vertical: defaultPadding * 0.75),
+            horizontal: kDefaultPadding, vertical: kDefaultPadding * 0.75),
         child: Row(
           children: [
             CircleAvatarWithActiveIndicator(
@@ -29,7 +29,7 @@ class ChatCard extends StatelessWidget {
             ),
             Expanded(
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
+                padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [

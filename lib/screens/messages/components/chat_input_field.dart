@@ -28,8 +28,8 @@ class _ChatInputFieldState extends State<ChatInputField> {
         children: [
           Container(
             padding: EdgeInsets.symmetric(
-              horizontal: defaultPadding,
-              vertical: defaultPadding / 2,
+              horizontal: kDefaultPadding,
+              vertical: kDefaultPadding / 2,
             ),
             decoration: BoxDecoration(
               color: Theme.of(context).scaffoldBackgroundColor,
@@ -43,12 +43,12 @@ class _ChatInputFieldState extends State<ChatInputField> {
             ),
             child: Row(
               children: [
-                Icon(Icons.mic, color: primaryColor),
-                SizedBox(width: defaultPadding),
+                Icon(Icons.mic, color: kPrimaryColor),
+                SizedBox(width: kDefaultPadding),
                 Expanded(
                   child: Row(
                     children: [
-                      SizedBox(width: defaultPadding / 4),
+                      SizedBox(width: kDefaultPadding / 4),
                       Expanded(
                         child: TextField(
                           decoration: InputDecoration(
@@ -62,7 +62,7 @@ class _ChatInputFieldState extends State<ChatInputField> {
                                       child: Icon(
                                         Icons.attach_file,
                                         color: _showAttachment
-                                            ? primaryColor
+                                            ? kPrimaryColor
                                             : Theme.of(context)
                                                 .textTheme
                                                 .bodyText1!
@@ -72,7 +72,7 @@ class _ChatInputFieldState extends State<ChatInputField> {
                                     ),
                                     Padding(
                                       padding: const EdgeInsets.symmetric(
-                                          horizontal: defaultPadding / 2),
+                                          horizontal: kDefaultPadding / 2),
                                       child: Icon(
                                         Icons.camera_alt_outlined,
                                         color: Theme.of(context)

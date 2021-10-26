@@ -1,6 +1,6 @@
+import 'package:flutter/material.dart';
 import 'package:chat/constants.dart';
 import 'package:chat/screens/auth/signin_or_signup_screen.dart';
-import 'package:flutter/material.dart';
 
 class WelcomeScreen extends StatelessWidget {
   @override
@@ -38,7 +38,7 @@ class WelcomeScreen extends StatelessWidget {
                   onPressed: () => Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => SigninOrSignupScreen(),
+                          builder: (context) => SignInOrSignupScreen(),
                         ),
                       ),
                   child: Row(
@@ -53,7 +53,7 @@ class WelcomeScreen extends StatelessWidget {
                                   .withOpacity(0.8),
                             ),
                       ),
-                      SizedBox(width: defaultPadding / 4),
+                      SizedBox(width: kDefaultPadding / 4),
                       Icon(
                         Icons.arrow_forward_ios,
                         size: 16,

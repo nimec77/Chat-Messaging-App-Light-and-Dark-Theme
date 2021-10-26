@@ -21,10 +21,10 @@ class CallsHistoryScreen extends StatelessWidget {
           children: [
             // For demo
             ...List.generate(
-              demoContactsImage.length,
+              kDemoContactsImage.length,
               (index) => CallHistoryCard(
                 name: "Darlene Robert",
-                image: demoContactsImage[index],
+                image: kDemoContactsImage[index],
                 time: "3m ago",
                 isActive: index.isEven,
                 isOutgoingCall: index.isOdd,
