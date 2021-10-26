@@ -1,17 +1,18 @@
+import 'package:chat/constants.dart';
+import 'package:chat/screens/calls/components/call_history_card.dart';
 import 'package:flutter/material.dart';
 
-import '../../constants.dart';
-import 'components/call_history_card.dart';
-
 class CallsHistoryScreen extends StatelessWidget {
+  const CallsHistoryScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Calls"),
+        title: const Text('Calls'),
         actions: [
           IconButton(
-            icon: Icon(Icons.search),
+            icon: const Icon(Icons.search),
             onPressed: () {},
           ),
         ],
@@ -23,9 +24,9 @@ class CallsHistoryScreen extends StatelessWidget {
             ...List.generate(
               kDemoContactsImage.length,
               (index) => CallHistoryCard(
-                name: "Darlene Robert",
+                name: 'Darlene Robert',
                 image: kDemoContactsImage[index],
-                time: "3m ago",
+                time: '3m ago',
                 isActive: index.isEven,
                 isOutgoingCall: index.isOdd,
                 isVideoCall: index.isEven,

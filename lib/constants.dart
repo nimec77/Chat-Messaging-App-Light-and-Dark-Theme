@@ -27,9 +27,9 @@ final kPasswordValidator = MultiValidator(
 const InputDecoration kOutInputDecoration = InputDecoration(
   filled: false,
   border: UnderlineInputBorder(),
-  hintText: "0",
+  hintText: '0',
 );
 
 // For demo
 
-final kDemoContactsImage = List.generate(5, (index) => "assets/images/user_${index + 1}.png");
+final kDemoContactsImage = List.generate(5, (index) => 'assets/images/user_${index + 1}.png');

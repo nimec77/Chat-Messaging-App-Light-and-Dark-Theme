@@ -1,6 +1,5 @@
+import 'package:chat/constants.dart';
 import 'package:flutter/material.dart';
-
-import '../constants.dart';
 
 class RecentSearchContacts extends StatelessWidget {
   const RecentSearchContacts({
@@ -15,16 +14,12 @@ class RecentSearchContacts extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "Recent search",
+            'Recent search',
             style: Theme.of(context).textTheme.subtitle2!.copyWith(
-                  color: Theme.of(context)
-                      .textTheme
-                      .subtitle2!
-                      .color!
-                      .withOpacity(0.32),
+                  color: Theme.of(context).textTheme.subtitle2!.color!.withOpacity(0.32),
                 ),
           ),
-          SizedBox(height: kDefaultPadding),
+          const SizedBox(height: kDefaultPadding),
           SizedBox(
             width: double.infinity,
             height: 56,
@@ -37,17 +32,17 @@ class RecentSearchContacts extends StatelessWidget {
                     child: Container(
                       decoration: BoxDecoration(
                         border: Border.all(
-                            width: 4,
-                            color: Theme.of(context).scaffoldBackgroundColor),
+                          width: 4,
+                          color: Theme.of(context).scaffoldBackgroundColor,
+                        ),
                         shape: BoxShape.circle,
                       ),
                       child: index < kDemoContactsImage.length
                           ? CircleAvatar(
                               radius: 26,
-                              backgroundImage:
-                                  AssetImage(kDemoContactsImage[index]),
+                              backgroundImage: AssetImage(kDemoContactsImage[index]),
                             )
-                          : RoundedCounter(total: 35),
+                          : const RoundedCounter(total: 35),
                     ),
                   ),
                 ),
@@ -61,9 +56,10 @@ class RecentSearchContacts extends StatelessWidget {
 }
 
 class RoundedCounter extends StatelessWidget {
+  const RoundedCounter({Key? key, required this.total}) : super(key: key);
+
   final int total;
 
-  const RoundedCounter({Key? key, required this.total}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -71,14 +67,12 @@ class RoundedCounter extends StatelessWidget {
       height: 52,
       width: 52,
       decoration: BoxDecoration(
-        color: Theme.of(context).brightness == Brightness.dark
-            ? Color(0xFF2E2F45)
-            : Color(0xFFEBFAF3),
+        color: Theme.of(context).brightness == Brightness.dark ? const Color(0xFF2E2F45) : const Color(0xFFEBFAF3),
         shape: BoxShape.circle,
       ),
       child: Center(
         child: Text(
-          "$total+",
+          '$total+',
           style: Theme.of(context).textTheme.subtitle1,
         ),
       ),

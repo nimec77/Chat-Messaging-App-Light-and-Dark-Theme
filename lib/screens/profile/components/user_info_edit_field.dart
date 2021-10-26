@@ -1,6 +1,5 @@
+import 'package:chat/constants.dart';
 import 'package:flutter/material.dart';
-
-import '../../../constants.dart';
 
 class UserInfoEditField extends StatelessWidget {
   const UserInfoEditField({

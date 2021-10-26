@@ -1,9 +1,11 @@
 import 'package:chat/components/primary_button.dart';
 import 'package:chat/constants.dart';
-import 'package:flutter/material.dart';
 import 'package:chat/screens/chats/chats_screen.dart';
+import 'package:flutter/material.dart';
 
 class SignInOrSignupScreen extends StatelessWidget {
+  const SignInOrSignupScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,30 +14,30 @@ class SignInOrSignupScreen extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
           child: Column(
             children: [
-              Spacer(flex: 2),
+              const Spacer(flex: 2),
               Image.asset(
                 MediaQuery.of(context).platformBrightness == Brightness.light
-                    ? "assets/images/Logo_light.png"
-                    : "assets/images/Logo_dark.png",
+                    ? 'assets/images/Logo_light.png'
+                    : 'assets/images/Logo_dark.png',
                 height: 146,
               ),
-              Spacer(),
+              const Spacer(),
               PrimaryButton(
-                text: "Sign In",
-                press: () => Navigator.pushReplacement(
+                text: 'Sign In',
+                press: () => Navigator.pushReplacement<void, void>(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => ChatsScreen(),
+                    builder: (context) => const ChatsScreen(),
                   ),
                 ),
               ),
-              SizedBox(height: kDefaultPadding * 1.5),
+              const SizedBox(height: kDefaultPadding * 1.5),
               PrimaryButton(
                 color: Theme.of(context).colorScheme.secondary,
-                text: "Sign Up",
+                text: 'Sign Up',
                 press: () {},
               ),
-              Spacer(flex: 2),
+              const Spacer(flex: 2),
             ],
           ),
         ),

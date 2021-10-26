@@ -1,6 +1,5 @@
+import 'package:chat/constants.dart';
 import 'package:flutter/material.dart';
-
-import '../../../constants.dart';
 
 class ProfilePic extends StatelessWidget {
   const ProfilePic({
@@ -17,8 +16,8 @@ class ProfilePic extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(kDefaultPadding),
-      margin: EdgeInsets.symmetric(vertical: kDefaultPadding),
+      padding: const EdgeInsets.all(kDefaultPadding),
+      margin: const EdgeInsets.symmetric(vertical: kDefaultPadding),
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         border: Border.all(
@@ -38,7 +37,7 @@ class ProfilePic extends StatelessWidget {
             child: CircleAvatar(
               radius: 13,
               backgroundColor: Theme.of(context).primaryColor,
-              child: Icon(
+              child: const Icon(
                 Icons.add,
                 color: Colors.white,
                 size: 20,

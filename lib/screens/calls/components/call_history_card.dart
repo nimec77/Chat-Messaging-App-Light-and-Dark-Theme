@@ -1,7 +1,6 @@
 import 'package:chat/components/circle_avatar_with_active_indicator.dart';
+import 'package:chat/constants.dart';
 import 'package:flutter/material.dart';
-
-import '../../../constants.dart';
 
 class CallHistoryCard extends StatelessWidget {
   const CallHistoryCard({
@@ -22,7 +21,7 @@ class CallHistoryCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      contentPadding: EdgeInsets.symmetric(
+      contentPadding: const EdgeInsets.symmetric(
         horizontal: kDefaultPadding,
         vertical: kDefaultPadding / 2,
       ),
@@ -43,7 +42,7 @@ class CallHistoryCard extends StatelessWidget {
               color:
                   isOutgoingCall ? Theme.of(context).primaryColor : kErrorColor,
             ),
-            SizedBox(width: kDefaultPadding / 2),
+            const SizedBox(width: kDefaultPadding / 2),
             Text(
               time,
               style: TextStyle(

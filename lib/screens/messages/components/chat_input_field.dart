@@ -1,7 +1,6 @@
+import 'package:chat/constants.dart';
+import 'package:chat/screens/messages/components/message_attachment.dart';
 import 'package:flutter/material.dart';
-
-import '../../../constants.dart';
-import 'message_attachment.dart';
 
 class ChatInputField extends StatefulWidget {
   const ChatInputField({
@@ -9,10 +8,10 @@ class ChatInputField extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _ChatInputFieldState createState() => _ChatInputFieldState();
+  ChatInputFieldState createState() => ChatInputFieldState();
 }
 
-class _ChatInputFieldState extends State<ChatInputField> {
+class ChatInputFieldState extends State<ChatInputField> {
   bool _showAttachment = false;
 
   void _updateAttachmentState() {
@@ -27,7 +26,7 @@ class _ChatInputFieldState extends State<ChatInputField> {
       child: Column(
         children: [
           Container(
-            padding: EdgeInsets.symmetric(
+            padding: const EdgeInsets.symmetric(
               horizontal: kDefaultPadding,
               vertical: kDefaultPadding / 2,
             ),
@@ -35,56 +34,48 @@ class _ChatInputFieldState extends State<ChatInputField> {
               color: Theme.of(context).scaffoldBackgroundColor,
               boxShadow: [
                 BoxShadow(
-                  offset: Offset(0, -4),
+                  offset: const Offset(0, -4),
                   blurRadius: 32,
-                  color: Color(0xFF087949).withOpacity(0.08),
+                  color: const Color(0xFF087949).withOpacity(0.08),
                 ),
               ],
             ),
             child: Row(
               children: [
-                Icon(Icons.mic, color: kPrimaryColor),
-                SizedBox(width: kDefaultPadding),
+                const Icon(Icons.mic, color: kPrimaryColor),
+                const SizedBox(width: kDefaultPadding),
                 Expanded(
                   child: Row(
                     children: [
-                      SizedBox(width: kDefaultPadding / 4),
+                      const SizedBox(width: kDefaultPadding / 4),
                       Expanded(
                         child: TextField(
                           decoration: InputDecoration(
-                              hintText: "Type message",
-                              suffixIcon: SizedBox(
-                                width: 65,
-                                child: Row(
-                                  children: [
-                                    InkWell(
-                                      onTap: _updateAttachmentState,
-                                      child: Icon(
-                                        Icons.attach_file,
-                                        color: _showAttachment
-                                            ? kPrimaryColor
-                                            : Theme.of(context)
-                                                .textTheme
-                                                .bodyText1!
-                                                .color!
-                                                .withOpacity(0.64),
-                                      ),
+                            hintText: 'Type message',
+                            suffixIcon: SizedBox(
+                              width: 65,
+                              child: Row(
+                                children: [
+                                  InkWell(
+                                    onTap: _updateAttachmentState,
+                                    child: Icon(
+                                      Icons.attach_file,
+                                      color: _showAttachment
+                                          ? kPrimaryColor
+                                          : Theme.of(context).textTheme.bodyText1!.color!.withOpacity(0.64),
                                     ),
-                                    Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: kDefaultPadding / 2),
-                                      child: Icon(
-                                        Icons.camera_alt_outlined,
-                                        color: Theme.of(context)
-                                            .textTheme
-                                            .bodyText1!
-                                            .color!
-                                            .withOpacity(0.64),
-                                      ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding / 2),
+                                    child: Icon(
+                                      Icons.camera_alt_outlined,
+                                      color: Theme.of(context).textTheme.bodyText1!.color!.withOpacity(0.64),
                                     ),
-                                  ],
-                                ),
-                              )),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
                         ),
                       ),
                     ],
@@ -93,7 +84,7 @@ class _ChatInputFieldState extends State<ChatInputField> {
               ],
             ),
           ),
-          if (_showAttachment) MessageAttachment(),
+          if (_showAttachment) const MessageAttachment(),
         ],
       ),
     );

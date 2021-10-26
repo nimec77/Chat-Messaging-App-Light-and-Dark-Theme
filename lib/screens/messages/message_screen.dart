@@ -1,14 +1,15 @@
 import 'package:chat/constants.dart';
+import 'package:chat/screens/messages/components/body.dart';
 import 'package:flutter/material.dart';
 
-import 'components/body.dart';
-
 class MessagesScreen extends StatelessWidget {
+  const MessagesScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(context),
-      body: Body(),
+      body: const Body(),
     );
   }
 
@@ -17,20 +18,20 @@ class MessagesScreen extends StatelessWidget {
       automaticallyImplyLeading: false,
       title: Row(
         children: [
-          BackButton(),
-          CircleAvatar(
-            backgroundImage: AssetImage("assets/images/user_2.png"),
+          const BackButton(),
+          const CircleAvatar(
+            backgroundImage: AssetImage('assets/images/user_2.png'),
           ),
-          SizedBox(width: kDefaultPadding * 0.75),
+          const SizedBox(width: kDefaultPadding * 0.75),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
+            children: const [
               Text(
-                "Kristin Watson",
+                'Kristin Watson',
                 style: TextStyle(fontSize: 16),
               ),
               Text(
-                "Active 3m ago",
+                'Active 3m ago',
                 style: TextStyle(fontSize: 12),
               )
             ],
@@ -38,9 +39,9 @@ class MessagesScreen extends StatelessWidget {
         ],
       ),
       actions: [
-        IconButton(icon: Icon(Icons.local_phone), onPressed: () {}),
-        IconButton(icon: Icon(Icons.videocam), onPressed: () {}),
-        SizedBox(width: kDefaultPadding / 2),
+        IconButton(icon: const Icon(Icons.local_phone), onPressed: () {}),
+        IconButton(icon: const Icon(Icons.videocam), onPressed: () {}),
+        const SizedBox(width: kDefaultPadding / 2),
       ],
     );
   }

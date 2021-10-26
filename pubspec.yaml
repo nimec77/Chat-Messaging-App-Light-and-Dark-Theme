@@ -12,10 +12,10 @@ environment:
 
 dependencies:
   cupertino_icons: ^1.0.3
-  form_field_validator: ^1.1.0
   flutter:
     sdk: flutter
   flutter_svg: ^0.23.0+1
+  form_field_validator: ^1.1.0
   google_fonts: ^2.1.0
 
 dev_dependencies:

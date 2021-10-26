@@ -1,24 +1,27 @@
+import 'package:chat/screens/welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:chat/screens/welcome/welcome_screen.dart';
 
 class SplashScreen extends StatefulWidget {
+  const SplashScreen({Key? key}) : super(key: key);
+
   @override
-  _SplashScreenState createState() => _SplashScreenState();
+  SplashScreenState createState() => SplashScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen> {
+class SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
     // demo time it required to load initial data
-    Future.delayed(
-      Duration(seconds: 1),
+    Future<void>.delayed(
+      const Duration(seconds: 1),
       () => Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-            builder: (context) => WelcomeScreen(),
-          )),
+        context,
+        MaterialPageRoute(
+          builder: (context) => const WelcomeScreen(),
+        ),
+      ),
     );
   }
 

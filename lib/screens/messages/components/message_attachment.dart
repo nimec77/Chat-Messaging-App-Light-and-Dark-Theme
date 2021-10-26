@@ -1,6 +1,5 @@
+import 'package:chat/constants.dart';
 import 'package:flutter/material.dart';
-
-import '../../../constants.dart';
 
 class MessageAttachment extends StatelessWidget {
   const MessageAttachment({
@@ -17,22 +16,22 @@ class MessageAttachment extends StatelessWidget {
         children: [
           MessageAttachmentCard(
             iconData: Icons.insert_drive_file,
-            title: "Document",
+            title: 'Document',
             press: () {},
           ),
           MessageAttachmentCard(
             iconData: Icons.image,
-            title: "Gallary",
+            title: 'Gallary',
             press: () {},
           ),
           MessageAttachmentCard(
             iconData: Icons.headset,
-            title: "Audio",
+            title: 'Audio',
             press: () {},
           ),
           MessageAttachmentCard(
             iconData: Icons.videocam,
-            title: "Video",
+            title: 'Video',
             press: () {},
           ),
         ],
@@ -42,16 +41,12 @@ class MessageAttachment extends StatelessWidget {
 }
 
 class MessageAttachmentCard extends StatelessWidget {
+  const MessageAttachmentCard({Key? key, required this.press, required this.iconData, required this.title})
+      : super(key: key);
+
   final VoidCallback press;
   final IconData iconData;
   final String title;
-
-  const MessageAttachmentCard(
-      {Key? key,
-      required this.press,
-      required this.iconData,
-      required this.title})
-      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -62,8 +57,8 @@ class MessageAttachmentCard extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              padding: EdgeInsets.all(kDefaultPadding * 0.75),
-              decoration: BoxDecoration(
+              padding: const EdgeInsets.all(kDefaultPadding * 0.75),
+              decoration: const BoxDecoration(
                 color: kPrimaryColor,
                 shape: BoxShape.circle,
               ),
@@ -72,15 +67,11 @@ class MessageAttachmentCard extends StatelessWidget {
                 size: 20,
               ),
             ),
-            SizedBox(height: kDefaultPadding / 2),
+            const SizedBox(height: kDefaultPadding / 2),
             Text(
               title,
               style: Theme.of(context).textTheme.caption!.copyWith(
-                    color: Theme.of(context)
-                        .textTheme
-                        .bodyText1!
-                        .color!
-                        .withOpacity(0.8),
+                    color: Theme.of(context).textTheme.bodyText1!.color!.withOpacity(0.8),
                   ),
             )
           ],

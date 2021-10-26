@@ -1,7 +1,6 @@
 import 'package:chat/components/circle_avatar_with_active_indicator.dart';
+import 'package:chat/constants.dart';
 import 'package:flutter/material.dart';
-
-import '../../../constants.dart';
 
 class ContactCard extends StatelessWidget {
   const ContactCard({
@@ -20,8 +19,10 @@ class ContactCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      contentPadding: EdgeInsets.symmetric(
-          horizontal: kDefaultPadding, vertical: kDefaultPadding / 2),
+      contentPadding: const EdgeInsets.symmetric(
+        horizontal: kDefaultPadding,
+        vertical: kDefaultPadding / 2,
+      ),
       onTap: () {},
       leading: CircleAvatarWithActiveIndicator(
         image: image,
@@ -34,8 +35,7 @@ class ContactCard extends StatelessWidget {
         child: Text(
           number,
           style: TextStyle(
-            color:
-                Theme.of(context).textTheme.bodyText1!.color!.withOpacity(0.64),
+            color: Theme.of(context).textTheme.bodyText1!.color!.withOpacity(0.64),
           ),
         ),
       ),

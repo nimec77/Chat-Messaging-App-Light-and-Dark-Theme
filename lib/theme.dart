@@ -9,10 +9,9 @@ ThemeData lightThemeData(BuildContext context) {
     primaryColor: kPrimaryColor,
     scaffoldBackgroundColor: Colors.white,
     appBarTheme: appBarTheme,
-    iconTheme: IconThemeData(color: kContentColorLightTheme),
-    textTheme: GoogleFonts.interTextTheme(Theme.of(context).textTheme)
-        .apply(bodyColor: kContentColorLightTheme),
-    colorScheme: ColorScheme.light(
+    iconTheme: const IconThemeData(color: kContentColorLightTheme),
+    textTheme: GoogleFonts.interTextTheme(Theme.of(context).textTheme).apply(bodyColor: kContentColorLightTheme),
+    colorScheme: const ColorScheme.light(
       primary: kPrimaryColor,
       secondary: kSecondaryColor,
       error: kErrorColor,
@@ -25,7 +24,8 @@ ThemeData lightThemeData(BuildContext context) {
     //   showUnselectedLabels: true,
     // ),
     inputDecorationTheme: inputDecorationTheme.copyWith(
-        fillColor: kPrimaryColor.withOpacity(0.05)),
+      fillColor: kPrimaryColor.withOpacity(0.05),
+    ),
   );
 }
 
@@ -36,10 +36,9 @@ ThemeData darkThemeData(BuildContext context) {
     primaryColor: kPrimaryColor,
     scaffoldBackgroundColor: kContentColorLightTheme,
     appBarTheme: appBarTheme,
-    iconTheme: IconThemeData(color: kContentColorDarkTheme),
-    textTheme: GoogleFonts.interTextTheme(Theme.of(context).textTheme)
-        .apply(bodyColor: kContentColorDarkTheme),
-    colorScheme: ColorScheme.dark().copyWith(
+    iconTheme: const IconThemeData(color: kContentColorDarkTheme),
+    textTheme: GoogleFonts.interTextTheme(Theme.of(context).textTheme).apply(bodyColor: kContentColorDarkTheme),
+    colorScheme: const ColorScheme.dark().copyWith(
       primary: kPrimaryColor,
       secondary: kSecondaryColor,
       error: kErrorColor,
@@ -55,14 +54,13 @@ ThemeData darkThemeData(BuildContext context) {
   );
 }
 
-final appBarTheme = AppBarTheme(centerTitle: false, elevation: 0);
+const appBarTheme = AppBarTheme(centerTitle: false, elevation: 0);
 final inputDecorationTheme = InputDecorationTheme(
   filled: true,
   fillColor: kContentColorDarkTheme.withOpacity(0.08),
-  contentPadding: EdgeInsets.symmetric(
-      horizontal: kDefaultPadding * 1.5, vertical: kDefaultPadding),
-  border: OutlineInputBorder(
+  contentPadding: const EdgeInsets.symmetric(horizontal: kDefaultPadding * 1.5, vertical: kDefaultPadding),
+  border: const OutlineInputBorder(
     borderSide: BorderSide.none,
-    borderRadius: const BorderRadius.all(Radius.circular(50)),
+    borderRadius: BorderRadius.all(Radius.circular(50)),
   ),
 );

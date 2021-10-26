@@ -1,7 +1,6 @@
-import 'package:chat/models/ChatMessage.dart';
+import 'package:chat/constants.dart';
+import 'package:chat/models/chat_message.dart';
 import 'package:flutter/material.dart';
-
-import '../../../constants.dart';
 
 class TextMessage extends StatelessWidget {
   const TextMessage({
@@ -14,7 +13,7 @@ class TextMessage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(
+      padding: const EdgeInsets.symmetric(
         horizontal: kDefaultPadding * 0.75,
         vertical: kDefaultPadding / 2,
       ),
