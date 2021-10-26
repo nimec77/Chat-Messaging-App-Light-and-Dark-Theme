@@ -10,8 +10,8 @@ const kErrorColor = Color(0xFFF03738);
 
 const kDefaultPadding = 16.0;
 
-const kLogoDarkTheme = 'assets/icons/Only_logo_dark_theme.svg';
-const kLogoLightTheme = 'assets/icons/Only_logo_light_theme.svg';
+const kLogoDarkTheme = 'assets/icons/only_logo_dark_theme.svg';
+const kLogoLightTheme = 'assets/icons/only_logo_light_theme.svg';
 
 const kRequiredField = 'This field is required';
 const kInvalidEmail = 'Enter a valid email address';

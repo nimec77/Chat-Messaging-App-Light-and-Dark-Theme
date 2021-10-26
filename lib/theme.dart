@@ -16,13 +16,12 @@ ThemeData lightThemeData(BuildContext context) {
       secondary: kSecondaryColor,
       error: kErrorColor,
     ),
-    // bottomNavigationBarTheme: BottomNavigationBarThemeData(
-    //   backgroundColor: Colors.white,
-    //   selectedItemColor: contentColorLightTheme.withOpacity(0.7),
-    //   unselectedItemColor: contentColorLightTheme.withOpacity(0.32),
-    //   selectedIconTheme: IconThemeData(color: primaryColor),
-    //   showUnselectedLabels: true,
-    // ),
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      backgroundColor: Colors.white,
+      selectedItemColor: kContentColorLightTheme.withOpacity(0.7),
+      unselectedItemColor: kContentColorLightTheme.withOpacity(0.32),
+      selectedIconTheme: const IconThemeData(color: kPrimaryColor),
+    ),
     inputDecorationTheme: inputDecorationTheme.copyWith(
       fillColor: kPrimaryColor.withOpacity(0.05),
     ),
@@ -30,7 +29,7 @@ ThemeData lightThemeData(BuildContext context) {
 }
 
 ThemeData darkThemeData(BuildContext context) {
-  // Bydefault flutter provie us light and dark theme
+  // By default flutter provide us light and dark theme
   // we just modify it as our need
   return ThemeData.dark().copyWith(
     primaryColor: kPrimaryColor,
@@ -43,13 +42,12 @@ ThemeData darkThemeData(BuildContext context) {
       secondary: kSecondaryColor,
       error: kErrorColor,
     ),
-    // bottomNavigationBarTheme: BottomNavigationBarThemeData(
-    //   backgroundColor: contentColorLightTheme,
-    //   selectedItemColor: Colors.white70,
-    //   unselectedItemColor: contentColorDarkTheme.withOpacity(0.32),
-    //   selectedIconTheme: IconThemeData(color: primaryColor),
-    //   showUnselectedLabels: true,
-    // ),
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      backgroundColor: kContentColorLightTheme,
+      selectedItemColor: Colors.white70,
+      unselectedItemColor: kContentColorDarkTheme.withOpacity(0.32),
+      selectedIconTheme: const IconThemeData(color: kPrimaryColor),
+    ),
     inputDecorationTheme: inputDecorationTheme,
   );
 }

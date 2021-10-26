@@ -21,7 +21,7 @@ class MessageAttachment extends StatelessWidget {
           ),
           MessageAttachmentCard(
             iconData: Icons.image,
-            title: 'Gallary',
+            title: 'Gallery',
             press: () {},
           ),
           MessageAttachmentCard(

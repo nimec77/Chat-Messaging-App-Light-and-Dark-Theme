@@ -31,8 +31,8 @@ class SplashScreenState extends State<SplashScreen> {
       body: Center(
         child: SvgPicture.asset(
           MediaQuery.of(context).platformBrightness == Brightness.dark
-              ? 'assets/icons/Logo_dark_theme.svg'
-              : 'assets/icons/Logo_light_theme.svg',
+              ? 'assets/icons/logo_dark_theme.svg'
+              : 'assets/icons/logo_light_theme.svg',
         ),
       ),
     );
