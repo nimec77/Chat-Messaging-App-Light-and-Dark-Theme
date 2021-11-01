@@ -1,37 +1,36 @@
 import 'package:chat/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 ThemeData lightThemeData(BuildContext context) {
   return ThemeData.light().copyWith(
-    primaryColor: kPrimaryColor,
+    primaryColor: primaryColor,
     scaffoldBackgroundColor: Colors.white,
     appBarTheme: appBarTheme,
-    iconTheme: IconThemeData(color: kContentColorLightTheme),
+    iconTheme: const IconThemeData(color: contentColorLightTheme),
     // textTheme: GoogleFonts.interTextTheme(Theme.of(context).textTheme)
     //     .apply(bodyColor: kContentColorLightTheme),
-    colorScheme: ColorScheme.light(
-      primary: kPrimaryColor,
-      secondary: kSecondaryColor,
-      error: kErrorColor,
+    colorScheme: const ColorScheme.light(
+      primary: primaryColor,
+      secondary: secondaryColor,
+      error: errorColor,
     ),
   );
 }
 
 ThemeData darkThemeData(BuildContext context) {
   return ThemeData.dark().copyWith(
-    primaryColor: kPrimaryColor,
-    scaffoldBackgroundColor: kContentColorLightTheme,
+    primaryColor: primaryColor,
+    scaffoldBackgroundColor: contentColorLightTheme,
     appBarTheme: appBarTheme,
-    iconTheme: IconThemeData(color: kContentColorDarkTheme),
+    iconTheme: const IconThemeData(color: contentColorDarkTheme),
     // textTheme: GoogleFonts.interTextTheme(Theme.of(context).textTheme)
     //     .apply(bodyColor: kContentColorDarkTheme),
-    colorScheme: ColorScheme.dark().copyWith(
-      primary: kPrimaryColor,
-      secondary: kSecondaryColor,
-      error: kErrorColor,
+    colorScheme: const ColorScheme.dark().copyWith(
+      primary: primaryColor,
+      secondary: secondaryColor,
+      error: errorColor,
     ),
   );
 }
 
-final appBarTheme = AppBarTheme(centerTitle: false, elevation: 0);
+const appBarTheme = AppBarTheme(centerTitle: false, elevation: 0);
