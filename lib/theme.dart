@@ -1,5 +1,6 @@
 import 'package:chat/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 ThemeData lightThemeData(BuildContext context) {
   return ThemeData.light().copyWith(
@@ -7,8 +8,7 @@ ThemeData lightThemeData(BuildContext context) {
     scaffoldBackgroundColor: Colors.white,
     appBarTheme: appBarTheme,
     iconTheme: const IconThemeData(color: contentColorLightTheme),
-    // textTheme: GoogleFonts.interTextTheme(Theme.of(context).textTheme)
-    //     .apply(bodyColor: kContentColorLightTheme),
+    textTheme: GoogleFonts.interTextTheme(Theme.of(context).textTheme).apply(bodyColor: contentColorLightTheme),
     colorScheme: const ColorScheme.light(
       primary: primaryColor,
       secondary: secondaryColor,
@@ -23,8 +23,7 @@ ThemeData darkThemeData(BuildContext context) {
     scaffoldBackgroundColor: contentColorLightTheme,
     appBarTheme: appBarTheme,
     iconTheme: const IconThemeData(color: contentColorDarkTheme),
-    // textTheme: GoogleFonts.interTextTheme(Theme.of(context).textTheme)
-    //     .apply(bodyColor: kContentColorDarkTheme),
+    textTheme: GoogleFonts.interTextTheme(Theme.of(context).textTheme).apply(bodyColor: contentColorDarkTheme),
     colorScheme: const ColorScheme.dark().copyWith(
       primary: primaryColor,
       secondary: secondaryColor,
